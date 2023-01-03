@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+</head>
+<body>
+    <form action="result" method="post">
+    {% for i in range %}
+        Question {{i}}:
+        <input type="radio" id="r1.{{i}}" name="q{{i}}" value="1" required/>
+        <label for="r1.{{i}}">Strongly Agree</label>
+        <input type="radio" id="r2.{{i}}" name="q{{i}}" value="2"/>
+        <label for="r2.{{i}}">Agree</label>
+        <input type="radio" id="r3.{{i}}" name="q{{i}}" value="3"/>
+        <label for="r3.{{i}}">Neutral</label>
+        <input type="radio" id="r4.{{i}}" name="q{{i}}" value="4"/>
+        <label for="r4.{{i}}">Disagree</label>
+        <input type="radio" id="r5.{{i}}" name="q{{i}}" value="5"/>
+        <label for="r5.{{i}}">Strongly disagree</label>
+        <br>
+    {% endfor %}
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
