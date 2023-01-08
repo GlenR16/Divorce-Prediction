@@ -19,17 +19,26 @@
         {% for i in range %}
         <div class="tab">
             Q{{i}}) {{questions.0}}:
-            
-            <label for="r1.{{i}}" >
-                <input type="radio" id="r1.{{i}}" name="q{{i}}" value="1" required oninput="this.className = ''"/> Never</label>
+           
+            <p>
+                <input type="radio" id="r1.{{i}}" name="q{{i}}" value="1" required oninput="this.className = ''"/>
+                <label for="r1.{{i}}" > Never</label>
+            </p>
+                
+          <p>
+
             <input type="radio" id="r2.{{i}}" name="q{{i}}" value="2"/>
             <label for="r2.{{i}}">Seldom</label>
+          </p>
+          <p>
             <input type="radio" id="r3.{{i}}" name="q{{i}}" value="3"/>
-            <label for="r3.{{i}}">Averagely</label>
+            <label for="r3.{{i}}">Averagely</label></p>
+            <p>
             <input type="radio" id="r4.{{i}}" name="q{{i}}" value="4"/>
-            <label for="r4.{{i}}">Frequently</label>
+            <label for="r4.{{i}}">Frequently</label></p>
+            <p>
             <input type="radio" id="r5.{{i}}" name="q{{i}}" value="5"/>
-            <label for="r5.{{i}}">Always</label>
+            <label for="r5.{{i}}">Always</label></p>
             <br>
         </div>
         {% endfor %}
