@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
 from .models import Data
 from django.views.decorators.csrf import csrf_exempt
+import pickle
 
-# import the pickle model here 
+#model import
+model = pickle.load(open('./divorce_prediction/model/adaboost.pkl', 'rb'))
+
 
 def index(request):
     return render(request,"index.html")
@@ -13,12 +16,15 @@ def form(request):
 @csrf_exempt
 def result(request):
     if request.method=="POST":
-        data = dict(request.POST.items())
-        #predict outcome variable
-        outcome=True
+        data = [int(x) for x in list(dict(request.POST.items()).values())]
+        outcome = model.predict([data])
         new_data = Data(prediction=outcome)
         new_data.set_data(data)
         new_data.save()
-        return render(request,"result.html",{"outcome":outcome})
+        if outcome:
+            return render(request,"result.html")
+
+        else:
+            return render(request,"result2.html")
     else:
         return redirect("form")
