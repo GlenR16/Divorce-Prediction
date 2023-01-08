@@ -22,8 +22,11 @@
            
 
             Q{{forloop.counter}}) {{i}}:
+            
 			<p>
+                <br>
             <input type="radio" id="r1.{{forloop.counter}}" name="q{{forloop.counter}}" value="1" required oninput="this.className = ''"/>
+            
             <label for="r1.{{forloop.counter}}">Never</label>
 			</p>
 			<p>
@@ -41,7 +44,7 @@
             <label for="r5.{{forloop.counter}}">Always</label>
 			</p>
 
-            <br>
+            
         </div>
         {% endfor %}
         <div style="overflow:auto;">
