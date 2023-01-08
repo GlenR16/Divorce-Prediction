@@ -4,7 +4,7 @@
   
   body {
     font-family: "Nunito", sans-serif;
-    color: #161515;
+    color: #012970;
     background-color: #f1f1f1;
   }
 
@@ -14,11 +14,12 @@
   
   #regForm {
     background-color: #ffffff;
-    margin: 100px auto;
+    margin: 90px auto;
     font-family: "Nunito", sans-serif;
-    padding: 40px;
+    padding: 30px;
     width: 70%;
     min-width: 300px;
+    border-radius: 5px;
   }
   
   h1 {
@@ -102,7 +103,7 @@
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
-    color: #666;
+    color: rgb(43, 41, 41);
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
