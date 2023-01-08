@@ -13,7 +13,7 @@ def index(request):
     return render(request,"index.html")
 
 def form(request):
-    return render(request,"form.html",{"range":range(1,55),"questions":questions})
+    return render(request,"form.html",{"questions":questions})
 
 @csrf_exempt
 def result(request):
@@ -23,7 +23,7 @@ def result(request):
         new_data = Data(prediction=outcome)
         new_data.set_data(data)
         new_data.save()
-        if outcome:
+        if 1 in outcome:
             return render(request,"result.html")
         else:
             return render(request,"result2.html")
