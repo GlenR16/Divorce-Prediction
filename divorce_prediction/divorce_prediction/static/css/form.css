@@ -3,13 +3,19 @@
   }
   
   body {
+    font-family: "Nunito", sans-serif;
+    color: #161515;
     background-color: #f1f1f1;
   }
+
+  /* body {
+    background-color: #f1f1f1;
+  } */
   
   #regForm {
     background-color: #ffffff;
     margin: 100px auto;
-    font-family: Raleway;
+    font-family: "Nunito", sans-serif;
     padding: 40px;
     width: 70%;
     min-width: 300px;
@@ -23,27 +29,27 @@
     padding: 10px;
     width: 100%;
     font-size: 17px;
-    font-family: Raleway;
+    font-family: "Nunito", sans-serif;
     border: 1px solid #aaaaaa;
-  }
+  } 
   
   /* Mark input boxes that gets an error on validation: */
   input.invalid {
     background-color: #ffdddd;
-  }
+  } 
   
   /* Hide all steps by default: */
-  .tab {
+   .tab {
     display: none;
   }
   
   button {
-    background-color: #04AA6D;
+    background-color: #4220ff;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     font-size: 17px;
-    font-family: Raleway;
+    font-family: "Nunito", sans-serif;
     cursor: pointer;
   }
   
@@ -54,7 +60,7 @@
   #prevBtn {
     background-color: #bbbbbb;
   }
-  
+   
   /* Make circles that indicate the steps of the form: */
   .step {
     height: 15px;
@@ -75,3 +81,5 @@
   .step.finish {
     background-color: #04AA6D;
   }
+
+  /* importing google fonts */

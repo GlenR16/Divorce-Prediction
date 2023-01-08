@@ -7,6 +7,9 @@
     <title>Divorce Prediction</title>
     <link rel="icon" href="{%static '/img/logo.png'%}">
     <link rel="stylesheet" href="{%static '/css/form.css'%}">
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
     <!-- FontAweome CDN Link for Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
@@ -16,8 +19,9 @@
         {% for i in range %}
         <div class="tab">
             Q{{i}}) {{questions.0}}:
-            <input type="radio" id="r1.{{i}}" name="q{{i}}" value="1" required oninput="this.className = ''"/>
-            <label for="r1.{{i}}">Never</label>
+            
+            <label for="r1.{{i}}" >
+                <input type="radio" id="r1.{{i}}" name="q{{i}}" value="1" required oninput="this.className = ''"/> Never</label>
             <input type="radio" id="r2.{{i}}" name="q{{i}}" value="2"/>
             <label for="r2.{{i}}">Seldom</label>
             <input type="radio" id="r3.{{i}}" name="q{{i}}" value="3"/>
