@@ -16,29 +16,31 @@
 <body>
     <form id="regForm" action="/result" method="post">
         <!-- One "tab" for each step in the form: -->
-        {% for i in range %}
+        {% for i in questions %}
         <div class="tab">
-            Q{{i}}) {{questions.0}}:
-           
-            <p>
-                <input type="radio" id="r1.{{i}}" name="q{{i}}" value="1" required oninput="this.className = ''"/>
-                <label for="r1.{{i}}" > Never</label>
-            </p>
-                
-          <p>
 
-            <input type="radio" id="r2.{{i}}" name="q{{i}}" value="2"/>
-            <label for="r2.{{i}}">Seldom</label>
-          </p>
-          <p>
-            <input type="radio" id="r3.{{i}}" name="q{{i}}" value="3"/>
-            <label for="r3.{{i}}">Averagely</label></p>
-            <p>
-            <input type="radio" id="r4.{{i}}" name="q{{i}}" value="4"/>
-            <label for="r4.{{i}}">Frequently</label></p>
-            <p>
-            <input type="radio" id="r5.{{i}}" name="q{{i}}" value="5"/>
-            <label for="r5.{{i}}">Always</label></p>
+           
+
+            Q{{forloop.counter}}) {{i}}:
+			<p>
+            <input type="radio" id="r1.{{forloop.counter}}" name="q{{forloop.counter}}" value="1" required oninput="this.className = ''"/>
+            <label for="r1.{{forloop.counter}}">Never</label>
+			</p>
+			<p>
+            <input type="radio" id="r2.{{forloop.counter}}" name="q{{forloop.counter}}" value="2"/>
+            <label for="r2.{{forloop.counter}}">Seldom</label>
+			</p>
+			<p>
+            <input type="radio" id="r3.{{forloop.counter}}" name="q{{forloop.counter}}" value="3"/>
+            <label for="r3.{{forloop.counter}}">Averagely</label></p>
+			<p>
+            <input type="radio" id="r4.{{forloop.counter}}" name="q{{forloop.counter}}" value="4"/>
+            <label for="r4.{{forloop.counter}}">Frequently</label></p>
+			<p>
+            <input type="radio" id="r5.{{forloop.counter}}" name="q{{forloop.counter}}" value="5"/>
+            <label for="r5.{{forloop.counter}}">Always</label>
+			</p>
+
             <br>
         </div>
         {% endfor %}
