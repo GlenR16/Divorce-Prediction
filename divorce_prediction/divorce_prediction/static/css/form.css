@@ -103,7 +103,7 @@
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
-    color: #012970;
+    color: rgb(43, 41, 41);
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
