@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divorce Prediction</title>
     <link rel="icon" href="{%static '/img/logo.png'%}">
-    <link rel="stylesheet" href="{%static 'style.css'%}">
+    <link rel="stylesheet" href="{%static '/css/form.css'%}">
     <!-- FontAweome CDN Link for Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
@@ -15,21 +15,20 @@
         <!-- One "tab" for each step in the form: -->
         {% for i in range %}
         <div class="tab">
-            Question {{i}}:
+            Q{{i}}) {{questions.0}}:
             <input type="radio" id="r1.{{i}}" name="q{{i}}" value="1" required oninput="this.className = ''"/>
-            <label for="r1.{{i}}">Strongly Agree</label>
+            <label for="r1.{{i}}">Never</label>
             <input type="radio" id="r2.{{i}}" name="q{{i}}" value="2"/>
-            <label for="r2.{{i}}">Agree</label>
+            <label for="r2.{{i}}">Seldom</label>
             <input type="radio" id="r3.{{i}}" name="q{{i}}" value="3"/>
-            <label for="r3.{{i}}">Neutral</label>
+            <label for="r3.{{i}}">Averagely</label>
             <input type="radio" id="r4.{{i}}" name="q{{i}}" value="4"/>
-            <label for="r4.{{i}}">Disagree</label>
+            <label for="r4.{{i}}">Frequently</label>
             <input type="radio" id="r5.{{i}}" name="q{{i}}" value="5"/>
-            <label for="r5.{{i}}">Strongly disagree</label>
+            <label for="r5.{{i}}">Always</label>
             <br>
         </div>
         {% endfor %}
-        
         <div style="overflow:auto;">
             <div style="float:right;">
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -37,7 +36,7 @@
             </div>
         </div>
     </form>
-    <script src="{%static 'script.js'%}"></script>
+    <script src="{%static '/js/form.js'%}"></script>
 
 </body>
 </html>

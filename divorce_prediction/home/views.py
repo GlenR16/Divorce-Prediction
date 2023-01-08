@@ -5,13 +5,15 @@ import pickle
 
 #model import
 model = pickle.load(open('./divorce_prediction/model/adaboost.pkl', 'rb'))
+#questions import
+questions = [x.strip() for x in open('./divorce_prediction/model/questions.txt')]
 
 
 def index(request):
     return render(request,"index.html")
 
 def form(request):
-    return render(request,"form.html",{"range":range(1,5)})
+    return render(request,"form.html",{"range":range(1,55),"questions":questions})
 
 @csrf_exempt
 def result(request):
