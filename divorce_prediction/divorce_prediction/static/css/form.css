@@ -5,7 +5,7 @@
   body {
     font-family: "Nunito", sans-serif;
     color: #012970;
-    background-color: #f1f1f1;
+    background-color: #4154f1;
   }
 
   /* body {
@@ -19,7 +19,7 @@
     padding: 30px;
     width: 70%;
     min-width: 300px;
-    border-radius: 5px;
+    border-radius: 15px;
   }
   
   h1 {
@@ -48,15 +48,16 @@
     background-color: #4220ff;
     color: #ffffff;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 10px 20px;
     font-size: 17px;
     font-family: "Nunito", sans-serif;
     cursor: pointer;
+    border: 3px solid rgba(1, 1, 1, 0);
   }
   
   button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   
   #prevBtn {

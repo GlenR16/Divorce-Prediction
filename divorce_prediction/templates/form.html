@@ -20,30 +20,26 @@
         <!-- One "tab" for each step in the form: -->
         {% for i in questions %}
         <div class="tab">
-
-           
-
-            Q{{forloop.counter}}) {{i}}:
-            
+            <h3>Q{{forloop.counter}}) {{i}}</h3> 
 			<p>
                 <br>
             <input type="radio" id="r1.{{forloop.counter}}" name="q{{forloop.counter}}" value="1" required oninput="this.className = ''"/>
             
-            <label for="r1.{{forloop.counter}}">Never</label>
+            <label for="r1.{{forloop.counter}}">Never / Strongly Disagree</label>
 			</p>
 			<p>
             <input type="radio" id="r2.{{forloop.counter}}" name="q{{forloop.counter}}" value="2"/>
-            <label for="r2.{{forloop.counter}}">Seldom</label>
+            <label for="r2.{{forloop.counter}}">Seldom / Disagree</label>
 			</p>
 			<p>
             <input type="radio" id="r3.{{forloop.counter}}" name="q{{forloop.counter}}" value="3"/>
             <label for="r3.{{forloop.counter}}">Averagely</label></p>
 			<p>
             <input type="radio" id="r4.{{forloop.counter}}" name="q{{forloop.counter}}" value="4"/>
-            <label for="r4.{{forloop.counter}}">Frequently</label></p>
+            <label for="r4.{{forloop.counter}}">Frequently / Agree</label></p>
 			<p>
             <input type="radio" id="r5.{{forloop.counter}}" name="q{{forloop.counter}}" value="5"/>
-            <label for="r5.{{forloop.counter}}">Always</label>
+            <label for="r5.{{forloop.counter}}">Always / Strongly Agree</label>
 			</p>
 
             
